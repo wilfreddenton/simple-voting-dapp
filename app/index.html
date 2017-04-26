@@ -92,10 +92,6 @@
               <div class="panel-title">Lookup Voter Info</div>
             </div>
             <div class="panel-body">
-              <div class="voter-details row text-left">
-                <div id="tokens-bought" class="margin-top-3 col-md-12"></div>
-                <div id="votes-cast" class="col-md-12"></div>
-              </div>
               <form id="info">
                 <div class="form-group">
                   <label for="address">Address of Voter</label>
@@ -104,6 +100,16 @@
                 <button type="submit" class="btn btn-primary">Lookup</button>
               </form>
             </div>
+            <table class="table table-bordered table-striped hidden">
+              <tr>
+                <td>Tokens Purchased</td>
+                <td id="tokens-bought"></td>
+              </tr>
+              <tr>
+                <td>Votes Cast (Tokens Spent)</td>
+                <td id="votes-cast"></td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
