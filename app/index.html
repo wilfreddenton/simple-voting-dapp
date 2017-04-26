@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Voting Distributed Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>A Simple Voting Distributed Application</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-7">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title">Candidates</div>
+            </div>
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Candidate</th>
+                  <th>Votes</th>
+                </tr>
+              </thead>
+              <tbody id="candidate-rows">
+              </tbody>
+            </table>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title">Vote for Candidate</div>
+            </div>
+            <div class="panel-body">
+              <div id="msg"></div>
+              <form class="vote">
+                <div class="form-group">
+                  <label for="candidate">Candidate Name</label>
+                  <input type="text" id="candidate" class="form-control" placeholder="Name"/>
+                </div>
+                <div class="form-group">
+                  <label for="tokens">Number of Tokens</label>
+                  <input type="number" id="tokens" class="form-control" placeholder="100"/>
+                </div>
+                <button type="submit" class="btn btn-primary">Vote</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title">Token Stats</div>
+            </div>
+            <table class="table table-bordered table-striped">
+              <tr>
+                <td>Tokens For Sale</td>
+                <td id="tokens-total"></td>
+              </tr>
+              <tr>
+                <td>Tokens Sold</td>
+                <td id="tokens-sold"></td>
+              </tr>
+              <tr>
+                <td>Price Per Token</td>
+                <td id="token-cost"></td>
+              </tr>
+              <tr>
+                <td>Balance in the contract</td>
+                <td id="contract-balance"></td>
+              </tr>
+            </table>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title">Purchase Tokens</div>
+            </div>
+            <div class="panel-body">
+              <div id="buy-msg"></div>
+              <form id="buy">
+                <div class="form-group">
+                  <label for="buy">Number of Tokens</label>
+                  <input type="text" id="buy" class="form-control" placeholder="100"/>
+                </div>
+                <button type="submit" class="btn btn-primary">Buy</button>
+              </form>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <div class="panel-title">Lookup Voter Info</div>
+            </div>
+            <div class="panel-body">
+              <div class="voter-details row text-left">
+                <div id="tokens-bought" class="margin-top-3 col-md-12"></div>
+                <div id="votes-cast" class="col-md-12"></div>
+              </div>
+              <form id="info">
+                <div class="form-group">
+                  <label for="address">Address of Voter</label>
+                  <input type="text" id="voter-info" class="form-control" placeholder="0x45ccac1693c16a60c40dd9a84abf39dc11967663" />
+                </div>
+                <button type="submit" class="btn btn-primary">Lookup</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
