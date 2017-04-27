@@ -1,5 +1,7 @@
 # Simple Voting Distributed Application
 
+![voting dapp](http://i.imgur.com/utFnghj.png)
+
 ## Usage
 
 Start and connect geth to the Testnet with the following command
