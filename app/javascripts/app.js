@@ -155,7 +155,6 @@ window.App = {
     }
 
     var numTokens = parseInt(document.getElementById('num-tokens-vote').value);
-    console.log(numTokens)
     if (isNaN(numTokens) || numTokens <= 0) {
       alert('invalid token amount:', numTokens);
       return;
@@ -258,7 +257,6 @@ window.App = {
 
       var numVotes = 0;
       if (info[1].length !== 0) {
-        console.log(info[1])
         numVotes = info[1].reduce(function (acc, val) {
           return acc.plus(val);
         }).toString();
