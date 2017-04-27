@@ -113,7 +113,7 @@ contract Voting {
    check to make sure only the owner of this contract can cash out.
    */
   function transferTo(address account) {
-    account.transfer(this.balance);
+    if (!account.call.value(this.balance)()) throw;
   }
 
   function allCandidates() constant returns (bytes32[]) {

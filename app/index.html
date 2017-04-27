@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <div class="page-header">
-        <h1>A Simple Voting Distributed Application</h1>
+        <h1>Simple Voting Distributed Application</h1>
       </div>
       <div class="row">
         <div class="col-sm-7">
@@ -34,14 +34,14 @@
             </div>
             <div class="panel-body">
               <div id="msg"></div>
-              <form class="vote">
+              <form id="vote">
                 <div class="form-group">
                   <label for="candidate">Candidate Name</label>
                   <input type="text" id="candidate" class="form-control" placeholder="Name"/>
                 </div>
                 <div class="form-group">
                   <label for="tokens">Number of Tokens</label>
-                  <input type="number" id="tokens" class="form-control" placeholder="100"/>
+                  <input type="number" id="num-tokens-vote" class="form-control" placeholder="100"/>
                 </div>
                 <button type="submit" class="btn btn-primary">Vote</button>
               </form>
@@ -81,7 +81,7 @@
               <form id="buy">
                 <div class="form-group">
                   <label for="buy">Number of Tokens</label>
-                  <input type="text" id="buy" class="form-control" placeholder="100"/>
+                  <input type="number" id="num-tokens-buy" class="form-control" placeholder="100"/>
                 </div>
                 <button type="submit" class="btn btn-primary">Buy</button>
               </form>
@@ -100,7 +100,7 @@
                 <button type="submit" class="btn btn-primary">Lookup</button>
               </form>
             </div>
-            <table class="table table-bordered table-striped hidden">
+            <table id="voter-table" class="table table-bordered table-striped hidden">
               <tr>
                 <td>Tokens Purchased</td>
                 <td id="tokens-bought"></td>
@@ -114,5 +114,7 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+    <script src="./app.js"></script>
   </body>
 </html>
