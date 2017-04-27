@@ -1,6 +1,6 @@
 # Simple Voting Distributed Application
 
-![voting dapp](http://i.imgur.com/utFnghj.png)
+![voting dapp](http://i.imgur.com/eTrmYEU.png)
 
 ## Usage
 
